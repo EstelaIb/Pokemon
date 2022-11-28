@@ -17,13 +17,13 @@ const obtenerUsuarios = async ()=>{
     }
 };
 
+obtenerUsuarios();
 
 const pintarUsuarios = (data) =>
 {
-    obtenerUsuarios();
     let body = "";
 
-    for(let i=0; i<data.length; i++)
+    for(let i=0; i < data.length; i++)
     {
         body += `<tr><td class="border  border-green-500">${data[i].id}</td><td class="border  border-green-500">${data[i].name}</td><td class="border  border-green-500">${data[i].email}</td></tr>`; 
         

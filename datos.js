@@ -1,4 +1,4 @@
-let url = "http://jsonplaceholder.typicode.com/users";
+let url = "https://jsonplaceholder.typicode.com/users";
 
 const obtenerUsuarios = async ()=>{
     try{
@@ -17,10 +17,10 @@ const obtenerUsuarios = async ()=>{
     }
 };
 
-obtenerUsuarios();
 
 const pintarUsuarios = (data) =>
 {
+    obtenerUsuarios();
     let body = "";
 
     for(let i=0; i < data.length; i++)

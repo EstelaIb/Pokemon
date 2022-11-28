@@ -1,0 +1,83 @@
+<!doctype html>
+<html data-theme="forest" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon-ball.png" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.41.0/dist/full.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+        <title>POKEMON</title>
+    </head>
+    <body>
+        <main class="container mx-auto flex flex-col">
+            <!--Title section-->
+            <section class="p-8 flex justify-center flex-row">
+                <img class="w-40 h-40 lg:w-48 lg:h-48 md:w-48 md:h-48" src="./assets/pikachu.png" alt="pikachu"/>
+                <h1 class="font-extrabold text-6xl text-yellow-600 lg:my-14 md:my-14 my-6">
+                    Batalla Pokémon
+                </h1>
+                <img class="w-32 h-32 lg:my-8 md:my-8 my-6" src="./assets/pokemonfight.png" alt="pikachuPelea"/>
+            </section>
+            <h2 class="text-slate-300 text-center py-4 text-2xl">
+                SELECCIONA LOS POKEMON PARA LA BATALLA
+            </h2>
+            <!--End title section-->
+            <!--Pokemon div-->
+            <div id="listarpokemon" class="flex w-full py-8 justify-center">
+                <div id="pok-1" class="font-extrabold mx-10 grid h-auto flex-grow card hover:bg-green-500 bg-transparent rounded-box place-items-center hover:text-black shadow-lg shadow-green-500/100 p-4">
+                    <a href="#" class="py-1">
+                        <p class="text-xl"></p>
+                    </a>
+                    <img class="w-32" alt="pikachu-1"/>
+                    <h3 class="hover:text-white ">HABILIDADES</h3>
+                    <ol>
+                    </ol>
+                </div>
+                <div class="grid grid-grows-2 my-8">
+                    <button type="submit" class="btn px-8  hover:bg-blue-400 hover:text-slate-900 hover:rotate-12 shadow-lg shadow-blue-500/100" onclick="bouttonSeleccionar()">Seleccionar</button>
+                    <div class="divider">
+                    <img src="./assets/punio.png" class="w-12" alt="punio"/>
+                    </div>
+                </div>
+                <div id="pok-2" class="font-extrabold mx-10 grid h-auto flex-grow card hover:bg-green-500 bg-transparent rounded-box place-items-center hover:text-black shadow-lg shadow-green-500/100 p-4">
+                    <a href="#" class="py-1">
+                        <p class="text-xl"></p>
+                    </a>  
+                    <img class="w-32" alt="pikachu-2"/>
+                    <h3 class="hover:text-white" >HABILIDADES</h3>
+                    <ol>
+                    </ol>                    
+  
+                </div>
+            </div>
+            <!--End Pokemon div-->
+
+            <!--div Users Table-->
+            <div class="grid grid-rows-2" >
+                <h3 class="text-extrabold text-green-500 text-center text-2xl py-4"> Lista de usuarios </h3>
+                <div class="divider px-8"><button type="submit" onclick="pintarUsuarios()" class="btn px-8  hover:bg-yellow-500 hover:text-slate-700 hover:rotate-12 shadow-lg shadow-yellow-500/100">Cargar</button></div>
+               <div class="overflow-x-auto py-4 p-8 md:px-56 lg:px-56">
+                  <table class="table w-full border-separate border-spacing-2">
+                    <!-- head -->
+                    <thead>
+                      <tr class="text-center">
+                        <th  class="border border-yellow-500">ID</th>
+                        <th  class="border border-yellow-500">Nombre</th>
+                        <th  class="border border-yellow-500">Email</th>
+                      </tr>
+                    </thead>
+                    <tbody id="data" class="text-center">
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            <!-- End div Users Table-->
+        </main>
+        <footer>
+            <h4 class="font-extrabold text-center py-8">Elaborado por EstelaIb 👩</h4>
+        </footer>
+        <script src="./datosPokemon.js"></script>
+        <script src="./datos.js"></script>
+    </body>
+</html>
